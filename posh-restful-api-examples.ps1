@@ -58,7 +58,7 @@ switch($exampleToRun) {
 
     }
     2 {
-        #eample 2
+        #example 2
         clear
 
         $ex2_url = "https://www.destroyallsoftware.com/talks/wat"
