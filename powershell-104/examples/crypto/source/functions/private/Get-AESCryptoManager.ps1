@@ -13,7 +13,7 @@ function Get-AESCryptoManager {
        [Parameter(Mandatory=$false)]
        [int]$iterationCount = 5
    )
-  
+
    switch ($PsCmdlet.ParameterSetName) {
     "aes" {
       $passphrase = $aesHash.passphrase
