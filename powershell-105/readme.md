@@ -29,7 +29,7 @@ InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure yo
 WARNING: Version '0.2.5' of module 'PSDeploy' is already installed at
 'C:\Users\[yourusername]\Documents\WindowsPowerShell\Modules\PSDeploy\0.2.5'. To install version '1.0', run Install-Module and
 add the -Force parameter, this command will install version '1.0' in side-by-side with version '0.2.5'.
-PS C:\WINDOWS\system32> Update-Module PSDeploy
+
 ```
 
 Then you'll want to simply update your install
@@ -43,6 +43,7 @@ InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure yo
 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): y
 PS C:\WINDOWS\system32>
+
 ```
 
 Once you've done the above, please make sure the following works! 
@@ -67,6 +68,7 @@ Function        To                                                 1.0        PS
 Function        WithOptions                                        1.0        PSDeploy
 Function        WithPostScript                                     1.0        PSDeploy
 Function        WithPreScript                                      1.0        PSDeploy
+
 ```
 
 ### Documentation and helpful Blog Posts <a name="docs"></a>
