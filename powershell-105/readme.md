@@ -7,7 +7,13 @@
     1. [Sub paragraph](#subparagraph1)
 
 ## Getting Started! <a name="gettingstarted"></a>
-Some introduction text
+So first and foremost, if you have no idea who RamblingCookieMonster is, you will after this!
+
+#### Documentation and helpful Blog Posts
+[PSDeploy Docs](https://psdeploy.readthedocs.io/en/latest)
+[PSDeploy](http://ramblingcookiemonster.github.io/PSDeploy)
+[PSDeploy Take Two](http://ramblingcookiemonster.github.io/PSDeploy-Take-Two)
+
 
 ## Another paragraph <a name="paragraph2"></a>
 The second paragraph text
