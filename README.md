@@ -19,6 +19,6 @@
 > ### PowerShell 105
 > #### PSDeploy
 > * First Presented: STLPSUG 2018
-> * No Slides - Lab Style, please see [this repo](powershell-104/README.md)
+> * No Slides - Lab Style, please see [this repo](powershell-105/README.md)
 
 
