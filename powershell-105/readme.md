@@ -1,6 +1,6 @@
 # PowerShell 105 - PSDeploy
 
-## Table of contents
+## Table of Contents
 1. [Install](docs/install.md)
 2. [Getting Started](#gettingstarted)
 3. [Another paragraph](#paragraph2)
