@@ -18,7 +18,7 @@ To install PSDeploy, you can follow these [simple steps](docs/install.md) or you
 
 Note: If you get something like this ...
 
-```PowerShell
+```
 PS C:\WINDOWS\system32> Install-Module PSDeploy
 
 Untrusted repository
@@ -34,7 +34,7 @@ PS C:\WINDOWS\system32> Update-Module PSDeploy
 
 Then you'll want to simply update your install
 
-```PowerShell
+```
 PS C:\WINDOWS\system32> Update-Module PSDeploy
 
 Untrusted repository
@@ -47,7 +47,7 @@ PS C:\WINDOWS\system32>
 
 Once you've done the above, please make sure the following works! 
 
-```PowerShell
+```
 PS C:\WINDOWS\system32>  Get-Command -Module PSDeploy
 
 CommandType     Name                                               Version    Source
