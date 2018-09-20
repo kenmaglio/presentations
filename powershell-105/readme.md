@@ -10,8 +10,7 @@
 So first and foremost, if you have no idea who RamblingCookieMonster is, you will after this!
 
 ### Installing PSDeploy <a name="install"></a>
-To install PSDeploy, you can follow these [simple steps](docs/install.md)
-Or you can look at the [Quick Start](https://psdeploy.readthedocs.io/en/latest/Quick-Start.-Installation-and-Example/) guide for PSDeploy
+To install PSDeploy, you can follow these [simple steps](docs/install.md) or you can look at the [Quick Start](https://psdeploy.readthedocs.io/en/latest/Quick-Start.-Installation-and-Example/) guide for PSDeploy
 
 ### Documentation and helpful Blog Posts
 - [PSDeploy Docs](https://psdeploy.readthedocs.io/en/latest)
