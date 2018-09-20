@@ -1,8 +1,6 @@
 # PowerShell 105 - PSDeploy
 
-## How to install
-
-### One time setup
+### How to install PSDeploy
 
 #### PowerShell < 5
 - Download the repository
