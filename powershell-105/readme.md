@@ -129,7 +129,7 @@ We want to have all our assets in one location, and we will want to organize our
 
 ```
 mkdir C:\_temp\deployfrom
-cp _bin\* C:\_temp\deployfrom\modules -Force -Recurse
+cp _bin\* C:\_temp\deployfrom\modules\simple -Force -Recurse
 cd C:\_temp\deployfrom
 ```
 
