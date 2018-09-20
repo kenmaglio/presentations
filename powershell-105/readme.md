@@ -262,7 +262,7 @@ The contents should be:
 ```
 Deploy FancyDeployment {
     By FileSystem AllTheThings {
-        FromSource modules,
+        FromSource modules\simple,
                    scripts
         To C:\_temp\deployto
         DependingOn FancyDeployment-Modules  #DeploymentName-ByName
@@ -377,6 +377,7 @@ Process the deployment 'SimpleDeployment'?
 
 #### Questions
 
+- But what about my scripts???
 - Why are there two AllTheThings?
 - How would I only deploy Tagged items?
 - What happens if I try to deploy FancyDeployment-Modules, where those servers aren't real?
