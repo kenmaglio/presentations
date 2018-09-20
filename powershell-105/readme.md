@@ -1,25 +1,24 @@
-# PowerShell 105 - PSDeploy
+3# PowerShell 105 - PSDeploy
 
 ## Table of Contents
 
 <!-- TOC -->
 
-- [PowerShell 105 - PSDeploy](#powershell-105---psdeploy)
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started!](#getting-started)
-    - [Installing PSDeploy](#installing-psdeploy)
-    - [Documentation and helpful Blog Posts](#documentation-and-helpful-blog-posts)
-  - [First Steps](#first-steps)
-    - [Getting our module](#getting-our-module)
-    - [Build a deployment folder](#build-a-deployment-folder)
-  - [Our First Deployment](#our-first-deployment)
-    - [Ingredients](#ingredients)
-    - [Deployment Configurations: *.PSDeploy.ps1](#deployment-configurations-psdeployps1)
-    - [A basic deployment](#a-basic-deployment)
-    - [A more fun deployment](#a-more-fun-deployment)
-      - [Questions](#questions)
-  - [Topics Not Covered](#topics-not-covered)
-    - [DeploymentType map: PSDeploy.yaml](#deploymenttype-map-psdeployyaml)
+- [Table of Contents](#table-of-contents)
+- [Getting Started!](#getting-started)
+  - [Installing PSDeploy](#installing-psdeploy)
+  - [Documentation and helpful Blog Posts](#documentation-and-helpful-blog-posts)
+- [First Steps](#first-steps)
+  - [Getting our module](#getting-our-module)
+  - [Build a deployment folder](#build-a-deployment-folder)
+- [Our First Deployment](#our-first-deployment)
+  - [Ingredients](#ingredients)
+  - [Deployment Configurations: *.PSDeploy.ps1](#deployment-configurations-psdeployps1)
+  - [A basic deployment](#a-basic-deployment)
+  - [A more fun deployment](#a-more-fun-deployment)
+    - [Questions](#questions)
+- [Topics Not Covered](#topics-not-covered)
+  - [DeploymentType map: PSDeploy.yaml](#deploymenttype-map-psdeployyaml)
 
 <!-- /TOC -->
 
@@ -30,7 +29,7 @@ So first and foremost, if you have no idea who RamblingCookieMonster is, you wil
 
 First and foremost you'll need to make sure you start powershell as an administrator ( elevated prompt ).
 
-To install PSDeploy, you can follow these [simple steps](docs/install.md) or you can look at the [Quick Start](https://psdeploy.readthedocs.io/en/latest/Quick-Start.-Installation-and-Example/) guide for PSDeploy
+To install PSDeploy, you can follow these [simple steps](docs/INSTALL.md) or you can look at the [Quick Start](https://psdeploy.readthedocs.io/en/latest/Quick-Start.-Installation-and-Example/) guide for PSDeploy
 
 Note: If you get something like this ...
 
@@ -262,7 +261,7 @@ The contents should be:
 ```
 Deploy FancyDeployment {
     By FileSystem AllTheThings {
-        FromSource modules\simple,
+        FromSource modules,
                    scripts
         To C:\_temp\deployto
         DependingOn FancyDeployment-Modules  #DeploymentName-ByName
@@ -311,7 +310,7 @@ Like many PowerShell objects, we can find more properties using Select-Object:
 PS C:\_temp\deployfrom> Get-PSDeployment -path .\fancy.psdeploy.ps1 | Select-Object -Property *
 
 DeploymentFile    : C:\_temp\deployfrom\fancy.psdeploy.ps1
-DeploymentName    : SomeDeploymentName-Modules
+DeploymentName    : FancyDeployment-Modules
 DeploymentType    : FileSystem
 DeploymentOptions :
 Source            : C:\_temp\deployfrom\modules
@@ -325,7 +324,7 @@ PostScript        :
 Raw               :
 
 DeploymentFile    : C:\_temp\deployfrom\fancy.psdeploy.ps1
-DeploymentName    : SomeDeploymentName-AllTheThings
+DeploymentName    : FancyDeployment-AllTheThings
 DeploymentType    : FileSystem
 DeploymentOptions :
 Source            : C:\_temp\deployfrom\modules
@@ -339,7 +338,7 @@ PostScript        :
 Raw               :
 
 DeploymentFile    : C:\_temp\deployfrom\fancy.psdeploy.ps1
-DeploymentName    : SomeDeploymentName-AllTheThings
+DeploymentName    : FancyDeployment-AllTheThings
 DeploymentType    : FileSystem
 DeploymentOptions :
 Source            : C:\_temp\deployfrom\scripts
@@ -364,23 +363,37 @@ Process the deployment 'FancyDeployment-Modules'?
 
 Processing deployment
 Process the deployment 'FancyDeployment-AllTheThings'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): n
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
 
 Processing deployment
 Process the deployment 'FancyDeployment-AllTheThings'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): n
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
 
 Processing deployment
 Process the deployment 'SimpleDeployment'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): n
 ```
 
+```
+PS C:\_temp\deployfrom> dir C:\_temp\deployto\ -Recurse | Select FullName
+
+FullName
+--------
+C:\_temp\deployto\simple
+C:\_temp\deployto\myscript.ps1
+C:\_temp\deployto\simple\1.0.0
+C:\_temp\deployto\simple\1.0.0\simple.psd1
+C:\_temp\deployto\simple\1.0.0\simple.psm1
+```
+
+
 #### Questions
 
-- But what about my scripts???
-- Why are there two AllTheThings?
-- How would I only deploy Tagged items?
-- What happens if I try to deploy FancyDeployment-Modules, where those servers aren't real?
+1. But what about my scripts???
+2. Why are there two AllTheThings?
+3. How would I only deploy Tagged items?
+4. What happens if I try to deploy FancyDeployment-Modules, where those servers aren't real?
+5. What is with the DependsOn? Why isn't that failing when I run AllTheThings?
 
 
 
