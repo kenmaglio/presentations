@@ -109,7 +109,7 @@ git clone https://github.com/kenmaglio/presentations.git
 Next we need to build our _simple_ module
 
 ```
-cd 
+cd .\presentations\powershell-104\examples\simple\
 .\build.ps1
 ```
 
