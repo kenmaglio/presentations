@@ -4,7 +4,7 @@
 1. [Getting Started](#gettingstarted)
     1. [Install](#install)
     2. [Documentation and Helpful Blog Posts(#docs)
-3. [Another paragraph](#paragraph2)
+3. [First Steps](#first)
     1. [Sub paragraph](#subparagraph1)
 
 ## Getting Started! <a name="gettingstarted"></a>
@@ -77,8 +77,6 @@ Function        WithPreScript                                      1.0        PS
 - [PSDeploy Take Two](http://ramblingcookiemonster.github.io/PSDeploy-Take-Two)
 
 
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+## First Steps <a name="first"></a>
 
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
+
