@@ -1,4 +1,4 @@
-3# PowerShell 105 - PSDeploy
+# PowerShell 105 - PSDeploy
 
 ## Table of Contents
 
